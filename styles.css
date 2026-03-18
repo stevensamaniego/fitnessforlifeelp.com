@@ -66,6 +66,11 @@ ul {
   text-shadow: 0 0 7px var(--cyan), 0 0 15px var(--cyan), 0 0 30px var(--blue);
 }
 
+.neon-text-subtle {
+  color: var(--cyan);
+  text-shadow: 0 0 5px var(--cyan), 0 0 10px rgba(0,191,255,0.4);
+}
+
 .neon-border {
   box-shadow: 0 0 10px var(--cyan-dim), 0 0 20px var(--cyan-faint);
   border: 1px solid var(--cyan-dim);
