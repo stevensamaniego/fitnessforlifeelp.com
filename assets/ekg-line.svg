@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60" width="1200" height="60" preserveAspectRatio="none">
+  <defs>
+    <filter id="ekg-glow" x="-5%" y="-50%" width="110%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Realistic ECG/EKG waveform: P wave, QRS complex, T wave pattern repeated -->
+  <!-- First beat -->
+  <path d="M 0,30 L 80,30 
+           L 100,30 L 108,27 L 116,30 
+           L 140,30 L 148,28 L 152,30 
+           L 160,30 L 168,25 L 172,30 L 176,15 L 180,5 L 184,50 L 188,42 L 192,30 
+           L 210,30 L 220,24 L 232,30 
+           L 280,30 
+           L 320,30 L 328,27 L 336,30 
+           L 360,30 L 368,28 L 372,30 
+           L 380,30 L 388,25 L 392,30 L 396,15 L 400,5 L 404,50 L 408,42 L 412,30 
+           L 430,30 L 440,24 L 452,30 
+           L 500,30 
+           L 540,30 L 548,27 L 556,30 
+           L 580,30 L 588,28 L 592,30 
+           L 600,30 L 608,25 L 612,30 L 616,15 L 620,5 L 624,50 L 628,42 L 632,30 
+           L 650,30 L 660,24 L 672,30 
+           L 720,30
+           L 760,30 L 768,27 L 776,30 
+           L 800,30 L 808,28 L 812,30 
+           L 820,30 L 828,25 L 832,30 L 836,15 L 840,5 L 844,50 L 848,42 L 852,30 
+           L 870,30 L 880,24 L 892,30 
+           L 940,30
+           L 980,30 L 988,27 L 996,30 
+           L 1020,30 L 1028,28 L 1032,30 
+           L 1040,30 L 1048,25 L 1052,30 L 1056,15 L 1060,5 L 1064,50 L 1068,42 L 1072,30 
+           L 1090,30 L 1100,24 L 1112,30 
+           L 1200,30" 
+        stroke="#00BFFF" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#ekg-glow)"/>
+</svg>
