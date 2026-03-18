@@ -1,19 +1,24 @@
 /* ===== VARIABLES ===== */
 :root {
-  --color-bg: #0a0a0a;
-  --color-surface: #111111;
-  --color-surface-2: #1a1a1a;
-  --color-border: #2a2a2a;
-  --color-text: #f0f0f0;
-  --color-text-muted: #999;
-  --color-accent: #e63946;
-  --color-accent-hover: #ff4d5a;
-  --color-accent-glow: rgba(230, 57, 70, 0.3);
+  --color-bg: #0D1117;
+  --color-surface: #141B24;
+  --color-surface-2: #1A2332;
+  --color-border: #1E2A3A;
+  --color-text: #FFFFFF;
+  --color-text-muted: #8B949E;
+  --color-accent: #00BFFF;
+  --color-accent-hover: #00D4FF;
+  --color-accent-deep: #0077FF;
+  --color-accent-glow: rgba(0, 191, 255, 0.3);
+  --font-heading: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --font: 'Montserrat', system-ui, -apple-system, sans-serif;
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.3s ease;
   --max-width: 1200px;
+  --neon-glow: 0 0 7px #00BFFF, 0 0 10px #00BFFF, 0 0 21px #00BFFF, 0 0 42px #0077FF;
+  --neon-glow-sm: 0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 15px #0077FF;
+  --neon-glow-box: 0 0 10px rgba(0, 191, 255, 0.3), 0 0 20px rgba(0, 191, 255, 0.15);
 }
 
 /* ===== RESET ===== */
@@ -68,7 +73,7 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(13, 17, 23, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--color-border);
@@ -82,20 +87,44 @@ ul {
   height: 70px;
 }
 
+/* ===== LOGO ===== */
 .logo {
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: var(--color-text);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.logo span {
-  color: var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-decoration: none;
+  line-height: 1;
 }
 
 .logo:hover {
   color: var(--color-text);
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-text);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.logo-heartbeat {
+  width: 80px;
+  height: 12px;
+  margin: -2px 0;
+  filter: drop-shadow(0 0 4px #00BFFF);
+}
+
+.logo-gym {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-accent);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-shadow: var(--neon-glow-sm);
+  line-height: 1;
 }
 
 .nav {
@@ -110,23 +139,27 @@ ul {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: color var(--transition);
+  transition: color var(--transition), text-shadow var(--transition);
 }
 
 .nav a:hover {
-  color: var(--color-text);
+  color: var(--color-accent);
+  text-shadow: var(--neon-glow-sm);
 }
 
 .nav-cta {
   background: var(--color-accent);
-  color: #fff !important;
+  color: var(--color-bg) !important;
   padding: 10px 20px;
   border-radius: var(--radius-sm);
   font-size: 0.8rem !important;
+  font-weight: 700 !important;
 }
 
 .nav-cta:hover {
   background: var(--color-accent-hover);
+  color: var(--color-bg) !important;
+  box-shadow: var(--neon-glow-box);
 }
 
 /* Mobile nav toggle */
@@ -164,6 +197,7 @@ ul {
   inset: 0;
   background: url('assets/gym-hero.jpg') center/cover no-repeat;
   transform: scale(1.05);
+  filter: saturate(0.3) brightness(0.6);
 }
 
 .hero-overlay {
@@ -171,9 +205,10 @@ ul {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 10, 10, 0.7) 0%,
-    rgba(10, 10, 10, 0.5) 50%,
-    rgba(10, 10, 10, 0.95) 100%
+    rgba(13, 17, 23, 0.75) 0%,
+    rgba(13, 17, 23, 0.5) 40%,
+    rgba(0, 30, 60, 0.4) 60%,
+    rgba(13, 17, 23, 0.95) 100%
   );
 }
 
@@ -183,17 +218,53 @@ ul {
   padding: 120px 20px 80px;
 }
 
+/* ===== HERO LOGO ===== */
+.hero-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-logo-text {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--color-text);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.hero-logo-heartbeat {
+  width: min(80%, 400px);
+  height: 30px;
+  margin: -4px 0;
+  filter: drop-shadow(0 0 6px #00BFFF);
+}
+
+.hero-logo-gym {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--color-accent);
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  text-shadow: var(--neon-glow);
+  line-height: 1;
+}
+
 .hero-content h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  font-weight: 900;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
   line-height: 1.1;
   margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 .hero-content h1 span {
   color: var(--color-accent);
+  text-shadow: var(--neon-glow-sm);
 }
 
 .hero-content p {
@@ -201,6 +272,20 @@ ul {
   color: var(--color-text-muted);
   max-width: 600px;
   margin: 0 auto 40px;
+}
+
+/* ===== HEARTBEAT DIVIDER ===== */
+.heartbeat-divider {
+  background: var(--color-bg);
+  padding: 0;
+  text-align: center;
+  line-height: 0;
+}
+
+.heartbeat-divider svg {
+  width: 100%;
+  height: 30px;
+  filter: drop-shadow(0 0 6px #00BFFF);
 }
 
 /* ===== BUTTONS ===== */
@@ -221,15 +306,15 @@ ul {
 
 .btn-primary {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-bg);
   border-color: var(--color-accent);
 }
 
 .btn-primary:hover {
   background: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
-  color: #fff;
-  box-shadow: 0 0 30px var(--color-accent-glow);
+  color: var(--color-bg);
+  box-shadow: var(--neon-glow-box), 0 0 40px rgba(0, 191, 255, 0.25);
   transform: translateY(-2px);
 }
 
@@ -242,6 +327,7 @@ ul {
 .btn-outline:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
+  box-shadow: var(--neon-glow-box);
   transform: translateY(-2px);
 }
 
@@ -265,16 +351,18 @@ ul {
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 900;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   margin-bottom: 16px;
 }
 
 .section-title span {
   color: var(--color-accent);
+  text-shadow: var(--neon-glow-sm);
 }
 
 .section-subtitle {
@@ -304,19 +392,21 @@ ul {
 .feature-card:hover {
   border-color: var(--color-accent);
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), var(--neon-glow-box);
 }
 
 .feature-icon {
   font-size: 2.5rem;
   margin-bottom: 16px;
+  filter: grayscale(0.3) brightness(1.2);
 }
 
 .feature-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 12px;
 }
 
@@ -345,19 +435,21 @@ ul {
 .amenity-card:hover {
   border-color: var(--color-accent);
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), var(--neon-glow-box);
 }
 
 .amenity-icon {
   font-size: 2.8rem;
   margin-bottom: 14px;
+  filter: grayscale(0.3) brightness(1.2);
 }
 
 .amenity-card h3 {
-  font-size: 1rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 8px;
 }
 
@@ -392,11 +484,12 @@ ul {
 
 .schedule-table th {
   background: var(--color-surface-2);
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  color: var(--color-accent);
 }
 
 .schedule-table td {
@@ -404,20 +497,20 @@ ul {
 }
 
 .class-hiit {
-  background: rgba(230, 57, 70, 0.15);
+  background: rgba(0, 191, 255, 0.12);
   color: var(--color-accent) !important;
   font-weight: 600;
 }
 
 .class-zumba {
-  background: rgba(255, 165, 0, 0.12);
-  color: #ffa500 !important;
+  background: rgba(0, 212, 255, 0.08);
+  color: #00D4FF !important;
   font-weight: 600;
 }
 
 .class-strength {
-  background: rgba(0, 200, 83, 0.12);
-  color: #00c853 !important;
+  background: rgba(0, 255, 136, 0.08);
+  color: #00FF88 !important;
   font-weight: 600;
 }
 
@@ -452,7 +545,7 @@ ul {
 
 .pricing-featured {
   border-color: var(--color-accent);
-  box-shadow: 0 0 40px var(--color-accent-glow);
+  box-shadow: var(--neon-glow-box), 0 0 40px rgba(0, 191, 255, 0.1);
 }
 
 .pricing-badge {
@@ -461,7 +554,7 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-bg);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -471,24 +564,29 @@ ul {
 }
 
 .pricing-card h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   margin-bottom: 16px;
 }
 
 .price {
-  font-size: 3.5rem;
-  font-weight: 900;
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 400;
   margin-bottom: 24px;
-  color: var(--color-text);
+  color: var(--color-accent);
+  text-shadow: var(--neon-glow-sm);
 }
 
 .price span {
+  font-family: var(--font);
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-text-muted);
+  text-shadow: none;
 }
 
 .pricing-card ul {
@@ -522,10 +620,11 @@ ul {
 
 .form-group label {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 8px;
   color: var(--color-text-muted);
 }
@@ -540,19 +639,19 @@ ul {
   color: var(--color-text);
   font-family: var(--font);
   font-size: 1rem;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #555;
+  color: #3D4A5C;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px var(--color-accent-glow);
+  box-shadow: 0 0 0 3px var(--color-accent-glow), var(--neon-glow-box);
 }
 
 .contact-info {
@@ -562,12 +661,14 @@ ul {
 }
 
 .contact-detail h3 {
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 6px;
   color: var(--color-accent);
+  text-shadow: var(--neon-glow-sm);
 }
 
 .contact-detail p {
@@ -595,7 +696,7 @@ ul {
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--color-surface);
+  background: #0A0E14;
   border-top: 1px solid var(--color-border);
   padding-top: 60px;
 }
@@ -616,10 +717,11 @@ ul {
 
 .footer-links h4,
 .footer-contact h4 {
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 16px;
   color: var(--color-text);
 }
@@ -637,6 +739,7 @@ ul {
 
 .footer-links a:hover {
   color: var(--color-accent);
+  text-shadow: var(--neon-glow-sm);
 }
 
 .footer-contact p {
@@ -653,11 +756,12 @@ ul {
 
 .social-links a {
   color: var(--color-text-muted);
-  transition: color var(--transition);
+  transition: color var(--transition), filter var(--transition);
 }
 
 .social-links a:hover {
   color: var(--color-accent);
+  filter: drop-shadow(0 0 6px #00BFFF);
 }
 
 .footer-bottom {
@@ -683,7 +787,7 @@ ul {
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(10, 10, 10, 0.98);
+    background: rgba(13, 17, 23, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 20px;
@@ -743,6 +847,14 @@ ul {
     max-width: 400px;
     margin: 0 auto;
   }
+
+  .hero-logo-text {
+    letter-spacing: 4px;
+  }
+
+  .hero-logo-gym {
+    letter-spacing: 6px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -765,5 +877,15 @@ ul {
   .btn-lg {
     padding: 16px 32px;
     font-size: 0.9rem;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  .logo-gym {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
   }
 }

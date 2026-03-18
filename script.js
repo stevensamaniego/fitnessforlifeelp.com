@@ -22,9 +22,9 @@ const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
-    header.style.background = 'rgba(10, 10, 10, 0.98)';
+    header.style.background = 'rgba(13, 17, 23, 0.98)';
   } else {
-    header.style.background = 'rgba(10, 10, 10, 0.85)';
+    header.style.background = 'rgba(13, 17, 23, 0.85)';
   }
 }, { passive: true });
 
