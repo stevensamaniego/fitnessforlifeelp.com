@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness For Life Gym — East El Paso's Community Gym</title>
-  <meta name="description" content="Fitness For Life Gym in East El Paso, TX. Weight room, cardio, HIIT, classes, steam room, kid's corner & personal training. Start your free trial today!">
+  <meta name="description" content="Fitness For Life Gym in East El Paso, TX. Weight room, cardio, HIIT, classes, steam room, kid's corner & personal training. Open 4AM-10PM. Start your free trial today!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,209 +15,221 @@
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="#hero" class="logo">
-        <span class="logo-text">FITNESS FOR LIFE</span>
-        <svg class="logo-heartbeat" viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg">
-          <polyline points="0,10 20,10 25,10 30,2 35,18 40,6 45,14 50,10 55,10 120,10" fill="none" stroke="#00BFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="logo-gym">GYM</span>
+      <a href="#hero" class="header-logo">
+        <img src="assets/logo-extracted.png" alt="Fitness For Life Gym" class="header-logo-img">
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav">
-        <a href="#about">About</a>
-        <a href="#amenities">Amenities</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#membership">Membership</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="nav-cta">Free Trial</a>
+        <a href="#hero">HOME</a>
+        <a href="#amenities">AMENITIES</a>
+        <a href="#membership">MEMBERSHIP</a>
+        <a href="#schedule">CLASSES</a>
+        <a href="#contact">CONTACT</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero" id="hero">
-    <div class="hero-bg" role="img" aria-label="Fitness For Life Gym interior"></div>
+    <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <div class="hero-logo">
-        <span class="hero-logo-text">FITNESS FOR LIFE</span>
-        <svg class="hero-logo-heartbeat" viewBox="0 0 300 30" xmlns="http://www.w3.org/2000/svg">
-          <polyline points="0,15 60,15 80,15 90,3 100,27 110,8 120,22 130,15 150,15 300,15" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="hero-logo-gym">GYM</span>
-      </div>
-      <h1>Your Fitness Journey<br><span>Starts Here</span></h1>
-      <p>East El Paso's community gym — building a stronger, healthier you since day one.</p>
-      <a href="#contact" class="btn btn-primary btn-lg">Start Your Free Trial</a>
+    <div class="hero-content">
+      <img src="assets/logo-extracted.png" alt="Fitness For Life Gym" class="hero-logo">
+      <!-- Heartbeat EKG Line -->
+      <svg class="hero-heartbeat" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <polyline class="ekg-line" points="0,20 150,20 200,20 220,20 235,8 245,35 255,5 265,32 275,15 290,20 340,20 600,20"
+          fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1 class="hero-tagline neon-text">EAST EL PASO'S COMMUNITY GYM</h1>
+      <a href="#contact" class="btn-cta">START YOUR FREE TRIAL</a>
     </div>
   </section>
 
-  <!-- Heartbeat Divider -->
-  <div class="heartbeat-divider">
-    <svg viewBox="0 0 1200 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <polyline points="0,15 400,15 450,15 470,3 490,27 510,8 530,22 550,15 600,15 1200,15" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-
-  <!-- About -->
+  <!-- About / Mission -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title">About <span>Our Gym</span></h2>
-      <p class="section-subtitle">A local gym whose mission is to promote the health &amp; wellbeing of our loved community of El Paso.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">&#9889;</div>
-          <h3>Community First</h3>
-          <p>We're proud to serve East El Paso with a welcoming, inclusive environment where everyone belongs — from beginners to seasoned athletes.</p>
+      <h2 class="section-heading fade-in">OUR MISSION</h2>
+      <p class="mission-text fade-in">A local gym whose mission is to promote the health &amp; wellbeing of our loved community of El Paso.</p>
+
+      <!-- Heartbeat Divider -->
+      <div class="heartbeat-divider">
+        <svg viewBox="0 0 1200 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <polyline points="0,20 350,20 430,20 460,8 475,35 490,5 505,32 520,15 540,20 600,20 1200,20"
+            fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="stats-row fade-in">
+        <div class="stat-card neon-border">
+          <span class="stat-number neon-text">2,700+</span>
+          <span class="stat-label">CHECK-INS</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#127941;</div>
-          <h3>Top-Rated Gym</h3>
-          <p>Rated the best gym in East El Paso by our members. Nearly 2,000 followers and thousands of check-ins — see why the community loves us.</p>
+        <div class="stat-card neon-border">
+          <span class="stat-number neon-text">EAST EP'S</span>
+          <span class="stat-label">#1 GYM</span>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128170;</div>
-          <h3>Complete Facility</h3>
-          <p>From free weights to a steam room, group classes to personal training — everything you need under one roof to reach your goals.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">&#128337;</div>
-          <h3>Open Early &amp; Late</h3>
-          <p>Open 4:00 AM to 10:00 PM so you can train on your schedule — before work, after school, or anywhere in between.</p>
+        <div class="stat-card neon-border">
+          <span class="stat-number neon-text">4AM–10PM</span>
+          <span class="stat-label">OPEN DAILY</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Heartbeat Divider -->
-  <div class="heartbeat-divider">
-    <svg viewBox="0 0 1200 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <polyline points="0,15 400,15 450,15 470,3 490,27 510,8 530,22 550,15 600,15 1200,15" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-
   <!-- Amenities -->
-  <section class="section section-dark" id="amenities">
+  <section class="section section-alt" id="amenities">
     <div class="container">
-      <h2 class="section-title">Our <span>Amenities</span></h2>
-      <p class="section-subtitle">Everything you need to crush your fitness goals.</p>
-      <div class="amenities-grid">
+      <h2 class="section-heading fade-in">WHAT WE OFFER</h2>
+      <div class="amenities-grid fade-in">
         <div class="amenity-card">
           <div class="amenity-icon">&#127947;&#65039;</div>
-          <h3>Weight Room</h3>
+          <h3>WEIGHT ROOM</h3>
           <p>Free weights, machines, and benches for every muscle group.</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon">&#127939;</div>
-          <h3>Cardio Zone</h3>
+          <h3>CARDIO</h3>
           <p>Treadmills, bikes, ellipticals, and more to keep your heart pumping.</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon">&#9889;</div>
-          <h3>HIIT Training</h3>
+          <h3>HIIT AREA</h3>
           <p>Dedicated high-intensity training area for explosive workouts.</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon">&#128131;</div>
-          <h3>Fitness Classes</h3>
+          <h3>FITNESS CLASSES</h3>
           <p>Zumba, group fitness, and more — led by experienced instructors.</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon">&#9832;</div>
-          <h3>Steam Room</h3>
+          <h3>STEAM ROOM</h3>
           <p>Relax and recover after your workout in our steam room.</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon">&#128703;</div>
-          <h3>Showers &amp; Lockers</h3>
-          <p>Clean facilities so you can freshen up before heading out.</p>
+          <h3>LOCKER ROOMS</h3>
+          <p>Clean showers and lockers so you can freshen up before heading out.</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon">&#128118;</div>
-          <h3>Kid's Corner</h3>
+          <h3>KID'S CORNER</h3>
           <p>Supervised childcare area so parents can work out worry-free.</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon">&#128170;</div>
-          <h3>Personal Training</h3>
+          <h3>PERSONAL TRAINING</h3>
           <p>One-on-one sessions with certified trainers to accelerate your results.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Heartbeat Divider -->
-  <div class="heartbeat-divider">
-    <svg viewBox="0 0 1200 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <polyline points="0,15 400,15 450,15 470,3 490,27 510,8 530,22 550,15 600,15 1200,15" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-
-  <!-- Schedule -->
-  <section class="section" id="schedule">
+  <!-- Membership -->
+  <section class="section" id="membership">
     <div class="container">
-      <h2 class="section-title">Class <span>Schedule</span></h2>
-      <p class="section-subtitle">Join our group classes throughout the week. Contact us for the latest schedule.</p>
-      <div class="schedule-wrapper">
+      <h2 class="section-heading fade-in">MEMBERSHIP PLANS</h2>
+      <div class="pricing-grid fade-in">
+        <div class="pricing-card neon-border">
+          <h3>BASIC</h3>
+          <div class="price"><span class="price-amount neon-text">$25</span><span class="price-period">/MO</span></div>
+          <ul>
+            <li>Gym access</li>
+            <li>Cardio equipment</li>
+            <li>Free weights &amp; machines</li>
+          </ul>
+          <a href="#contact" class="btn-join">JOIN NOW</a>
+        </div>
+        <div class="pricing-card pricing-featured">
+          <div class="pricing-badge">MOST POPULAR</div>
+          <h3>STANDARD</h3>
+          <div class="price"><span class="price-amount neon-text">$35</span><span class="price-period">/MO</span></div>
+          <ul>
+            <li>All gym access</li>
+            <li>All fitness classes</li>
+            <li>Steam room access</li>
+            <li>Kid's Corner</li>
+          </ul>
+          <a href="#contact" class="btn-join btn-join-featured">JOIN NOW</a>
+        </div>
+        <div class="pricing-card neon-border">
+          <h3>PREMIUM</h3>
+          <div class="price"><span class="price-amount neon-text">$50</span><span class="price-period">/MO</span></div>
+          <ul>
+            <li>All access + classes</li>
+            <li>Personal training sessions</li>
+            <li>Custom workout plan</li>
+          </ul>
+          <a href="#contact" class="btn-join">JOIN NOW</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Schedule -->
+  <section class="section section-alt" id="schedule">
+    <div class="container">
+      <h2 class="section-heading fade-in">CLASS SCHEDULE</h2>
+      <div class="schedule-wrapper fade-in">
         <table class="schedule-table">
           <thead>
             <tr>
-              <th>Time</th>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-              <th>Saturday</th>
+              <th>TIME</th>
+              <th>MON</th>
+              <th>TUE</th>
+              <th>WED</th>
+              <th>THU</th>
+              <th>FRI</th>
+              <th>SAT</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>6:00 AM</strong></td>
-              <td class="class-hiit">HIIT</td>
-              <td></td>
-              <td class="class-hiit">HIIT</td>
-              <td></td>
-              <td class="class-hiit">HIIT</td>
-              <td class="class-zumba">Zumba</td>
+              <td>6:00 AM</td>
+              <td>HIIT Circuit</td>
+              <td>—</td>
+              <td>HIIT Circuit</td>
+              <td>—</td>
+              <td>HIIT Circuit</td>
+              <td>Zumba</td>
             </tr>
             <tr>
-              <td><strong>9:00 AM</strong></td>
-              <td></td>
-              <td class="class-zumba">Zumba</td>
-              <td></td>
-              <td class="class-zumba">Zumba</td>
-              <td></td>
-              <td class="class-hiit">HIIT</td>
+              <td>9:00 AM</td>
+              <td>Yoga</td>
+              <td>Zumba</td>
+              <td>Yoga</td>
+              <td>Zumba</td>
+              <td>—</td>
+              <td>Cardio Blast</td>
             </tr>
             <tr>
-              <td><strong>12:00 PM</strong></td>
-              <td class="class-strength">Strength</td>
-              <td></td>
-              <td class="class-strength">Strength</td>
-              <td></td>
-              <td class="class-strength">Strength</td>
-              <td></td>
+              <td>12:00 PM</td>
+              <td>Strength Training</td>
+              <td>—</td>
+              <td>Strength Training</td>
+              <td>—</td>
+              <td>Strength Training</td>
+              <td>—</td>
             </tr>
             <tr>
-              <td><strong>5:30 PM</strong></td>
-              <td class="class-zumba">Zumba</td>
-              <td class="class-hiit">HIIT</td>
-              <td class="class-zumba">Zumba</td>
-              <td class="class-hiit">HIIT</td>
-              <td class="class-zumba">Zumba</td>
-              <td></td>
+              <td>5:30 PM</td>
+              <td>Zumba</td>
+              <td>HIIT Circuit</td>
+              <td>Zumba</td>
+              <td>HIIT Circuit</td>
+              <td>Cardio Blast</td>
+              <td>—</td>
             </tr>
             <tr>
-              <td><strong>7:00 PM</strong></td>
-              <td class="class-hiit">HIIT</td>
-              <td class="class-strength">Strength</td>
-              <td class="class-hiit">HIIT</td>
-              <td class="class-strength">Strength</td>
-              <td></td>
-              <td></td>
+              <td>7:00 PM</td>
+              <td>Cardio Blast</td>
+              <td>Strength Training</td>
+              <td>Cardio Blast</td>
+              <td>Strength Training</td>
+              <td>—</td>
+              <td>—</td>
             </tr>
           </tbody>
         </table>
@@ -226,111 +238,57 @@
     </div>
   </section>
 
-  <!-- Heartbeat Divider -->
-  <div class="heartbeat-divider">
-    <svg viewBox="0 0 1200 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <polyline points="0,15 400,15 450,15 470,3 490,27 510,8 530,22 550,15 600,15 1200,15" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-
-  <!-- Membership -->
-  <section class="section section-dark" id="membership">
-    <div class="container">
-      <h2 class="section-title">Membership <span>Plans</span></h2>
-      <p class="section-subtitle">Affordable plans for every fitness level. No long-term contracts.</p>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Basic</h3>
-          <div class="price">$25<span>/mo</span></div>
-          <ul>
-            <li>Full gym access</li>
-            <li>Cardio equipment</li>
-            <li>Free weights &amp; machines</li>
-            <li>Showers &amp; lockers</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline">Sign Up</a>
-        </div>
-        <div class="pricing-card pricing-featured">
-          <div class="pricing-badge">Most Popular</div>
-          <h3>Standard</h3>
-          <div class="price">$35<span>/mo</span></div>
-          <ul>
-            <li>Everything in Basic</li>
-            <li>All fitness classes</li>
-            <li>HIIT training area</li>
-            <li>Steam room access</li>
-            <li>Kid's Corner</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Sign Up</a>
-        </div>
-        <div class="pricing-card">
-          <h3>Premium</h3>
-          <div class="price">$50<span>/mo</span></div>
-          <ul>
-            <li>Everything in Standard</li>
-            <li>4 personal training sessions/mo</li>
-            <li>Custom workout plan</li>
-            <li>Priority class booking</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline">Sign Up</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Heartbeat Divider -->
-  <div class="heartbeat-divider">
-    <svg viewBox="0 0 1200 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <polyline points="0,15 400,15 450,15 470,3 490,27 510,8 530,22 550,15 600,15 1200,15" fill="none" stroke="#00BFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-
   <!-- Contact -->
   <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title">Get Your <span>Free Trial</span></h2>
-      <p class="section-subtitle">Ready to start? Drop us a message or stop by the gym. Your first visit is on us!</p>
-      <div class="contact-grid">
+      <h2 class="section-heading fade-in">GET IN TOUCH</h2>
+      <div class="contact-grid fade-in">
         <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-group">
-            <label for="name">Full Name</label>
+            <label for="name">NAME</label>
             <input type="text" id="name" name="name" required placeholder="Your name">
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">EMAIL</label>
             <input type="email" id="email" name="email" required placeholder="you@email.com">
           </div>
           <div class="form-group">
-            <label for="phone">Phone</label>
+            <label for="phone">PHONE</label>
             <input type="tel" id="phone" name="phone" placeholder="(915) 555-0000">
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="I'm interested in a free trial!"></textarea>
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" rows="5" placeholder="I'm interested in a free trial!"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+          <button type="submit" class="btn-submit">SEND MESSAGE</button>
         </form>
         <div class="contact-info">
           <div class="contact-detail">
-            <h3>Visit Us</h3>
+            <h3>ADDRESS</h3>
             <p>12821 Montana Ave<br>El Paso, TX 79938</p>
           </div>
           <div class="contact-detail">
-            <h3>Call Us</h3>
+            <h3>PHONE</h3>
             <p><a href="tel:+19152834145">(915) 283-4145</a></p>
           </div>
           <div class="contact-detail">
-            <h3>Hours</h3>
+            <h3>HOURS</h3>
             <p>Monday – Sunday<br>4:00 AM – 10:00 PM</p>
           </div>
           <div class="contact-detail">
-            <h3>Follow Us</h3>
-            <p><a href="https://www.facebook.com/FitnessForLifeELP" target="_blank" rel="noopener">Facebook — Fitness For Life ELP</a></p>
+            <h3>FOLLOW US</h3>
+            <p>
+              <a href="https://www.facebook.com/FitnessForLifeELP" target="_blank" rel="noopener" class="social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook — Fitness For Life ELP
+              </a>
+            </p>
           </div>
           <div class="map-wrapper">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.5!2d-106.2!3d31.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQ5JzEyLjAiTiAxMDbCsDEyJzAwLjAiVw!5e0!3m2!1sen!2sus!4v1"
-              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
               title="Fitness For Life Gym location on Google Maps"></iframe>
           </div>
         </div>
@@ -342,39 +300,29 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#hero" class="logo">
-          <span class="logo-text">FITNESS FOR LIFE</span>
-          <svg class="logo-heartbeat" viewBox="0 0 120 20" xmlns="http://www.w3.org/2000/svg">
-            <polyline points="0,10 20,10 25,10 30,2 35,18 40,6 45,14 50,10 55,10 120,10" fill="none" stroke="#00BFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span class="logo-gym">GYM</span>
-        </a>
+        <img src="assets/logo-extracted.png" alt="Fitness For Life Gym" class="footer-logo">
         <p>Promoting the health &amp; wellbeing of our loved community of El Paso.</p>
       </div>
       <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a href="#about">About</a>
+        <h4>QUICK LINKS</h4>
+        <a href="#hero">Home</a>
         <a href="#amenities">Amenities</a>
-        <a href="#schedule">Schedule</a>
         <a href="#membership">Membership</a>
+        <a href="#schedule">Classes</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-contact">
-        <h4>Contact</h4>
+        <h4>CONTACT</h4>
         <p>12821 Montana Ave<br>El Paso, TX 79938</p>
         <p><a href="tel:+19152834145">(915) 283-4145</a></p>
-        <p>Mon – Sun: 4:00 AM – 10:00 PM</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/FitnessForLifeELP" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-        </div>
+        <p>Mon – Sun: 4AM – 10PM</p>
+        <a href="https://www.facebook.com/FitnessForLifeELP" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Fitness For Life Gym. All rights reserved.</p>
-      </div>
+      <p>&copy; 2026 Fitness For Life Gym. All rights reserved.</p>
     </div>
   </footer>
 
