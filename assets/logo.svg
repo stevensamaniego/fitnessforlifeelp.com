@@ -1,22 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
   <defs>
     <!-- Blue glow for white text -->
-    <filter id="blue-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
-      <feFlood flood-color="#00BFFF" flood-opacity="0.7" result="color"/>
+    <filter id="blue-glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#00BFFF" flood-opacity="0.85" result="color"/>
       <feComposite in="color" in2="blur" operator="in" result="colored-blur"/>
       <feMerge>
+        <feMergeNode in="colored-blur"/>
         <feMergeNode in="colored-blur"/>
         <feMergeNode in="colored-blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <!-- Subtle cyan glow for GYM -->
-    <filter id="gym-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-      <feFlood flood-color="#00BFFF" flood-opacity="0.5" result="color"/>
+    <!-- Cyan glow for GYM -->
+    <filter id="gym-glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#00BFFF" flood-opacity="0.7" result="color"/>
       <feComposite in="color" in2="blur" operator="in" result="colored-blur"/>
       <feMerge>
+        <feMergeNode in="colored-blur"/>
         <feMergeNode in="colored-blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
